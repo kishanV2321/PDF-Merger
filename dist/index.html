@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PDF Merger</title>
+    <link rel="icon" type="image/x-icon" href="fav/android-chrome-512x512.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="border-gray-200 bg-blue-50">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="logo/pdf logo.png" class="h-10" alt="PDF logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap ">PDF Merger</span>
+            </a>
+            <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                <a href="tel:5541251234" class="text-sm  text-gray-800  hover:underline">(+91)
+                    5142-5146</a>
+                <a href="#" class="text-sm  text-blue-800 hover:underline">Login</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="bg-white">
+        <div class="max-w-screen-xl px-4 py-3 mx-auto">
+            <div class="flex items-center">
+                <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                    <li>
+                        <a href="#" class="text-gray-900  hover:underline" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-900">Company</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-900">Tool</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-900">Merge PDF</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main PDF Merger Box-1 -->
+    <div class="bg-cyan-600 flex justify-center overflow-hidden">
+        <div class="bg-white m-10 p-10 max-h-fit border-black border 2 rounded-md">
+
+            <div class="flex flex-row place-content-center">
+                <img src="logo/pdf logo.png" class="h-6 " alt="PDF logo" />
+                <span class="self-center text-sm font-semibold whitespace-nowrap ">PDF Merger</span>
+            </div>
+
+            <div class="flex flex-row pb-2 place-content-center">
+                <h5 class="text-4xl font-medium">Merge PDFs</h5>
+            </div>
+            <div class="p-6 border-dashed border-2 border-sky-500 ...">
+                <form method="post" action="/merge" enctype="multipart/form-data"
+                    class="max-w-lg mx-auto flex flex-col items-center">
+
+                    <img class="h-10 sm:h-16 mb-2" src="logo/merge-pdf.png" alt="pdf-merge-img">
+                    <label class="block mb-2 text-xs md:text-sm font-medium text-gray-900" for="default_size">Drag and
+                        drop PDFs to merge them into one file with our PDF combiner.</label>
+                    <input
+                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                        id="default_size" name="pdfs" type="file" multiple accept=".pdf">
+                    <div class="hidden sm:block mt-1 text-xs text-gray-500">Your files will be securely handled by KV
+                        servers and deleted unless you sign in to save them.
+                    </div>
+                    <button type="submit" value="submit"
+                        class="mt-2 text-white bg-cyan-600 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to use PDF Merger Box-2 -->
+    <div class="p-4 mx-auto">
+        <div class="md:grid sm:grid-cols-2">
+            <div class="md:ml-12 lg:ml-24">
+                <div class="">
+                    <h2 class="text-3xl font-semibold text-gray-900">How to combine PDF files</h2>
+                    <p class="mb-4 text-lg font-semibold text-gray-700">Follow these easy steps to combine PDF documents
+                        into one file:</p>
+                </div>
+                <ol class="space-y-4 list-decimal list-inside">
+                    <li>
+                        Click the <strong>Select a file</strong> button above or drag and drop files into the
+                        drop zone.
+                    </li>
+                    <hr class="h-px my-8 bg-gray-300 border-0">
+                    <li>
+                        Select the files you want to merge using the Acrobat PDF combiner tool.
+                    </li>
+                    <hr class="h-px my-8 bg-gray-300 border-0">
+                    <li>
+                        Reorder the files if needed.
+                    </li>
+                    <hr class="h-px my-8 bg-gray-300 border-0">
+                    <li>
+                        Click <strong>Merge files</strong>.
+                    </li>
+                    <hr class="h-px my-8 bg-gray-300 border-0">
+                    <li>
+                        Download the merged PDF. Sign in to organise individual pages or share the file.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="hidden md:ml-12 lg:ml-24 md:flex md:items-center">
+                <img class="h-60" src="logo/pdf-file-format.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer  -->
+    <footer class="bg-gray-100">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/"
+                    class="hover:underline">PDF Merger™</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
