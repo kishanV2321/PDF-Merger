@@ -31,7 +31,7 @@ app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
         res.redirect(`/static/${d}.pdf`);
     } catch (error) {
         console.error('Error handling request:', error);
-        res.status(500).send('Error handling request');
+        res.status(500).send(`Error handling request: ${error.message}`);
     }
 });
 
