@@ -11,7 +11,8 @@ const mergepdfs = async (files) => {
         await merger.save(`public/${d}.pdf`);
         return d;
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error merging PDFs:', error);
+        throw error;
     }
 };
 

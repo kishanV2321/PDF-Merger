@@ -13,13 +13,26 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "dist/index.html"))
 })
 
-app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
-    console.log(req.files)
-    const files = req.files.map(file => file.path);
-    let d = await mergepdfs(files);
+// app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
+//     console.log(req.files)
+//     const files = req.files.map(file => file.path);
+//     let d = await mergepdfs(files);
 
-    res.redirect(`/static/${d}.pdf`);
+//     res.redirect(`/static/${d}.pdf`);
     
+// });
+
+app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
+    console.log(req.files);
+
+    try {
+        const files = req.files.map(file => file.path);
+        let d = await mergepdfs(files);
+        res.redirect(`/static/${d}.pdf`);
+    } catch (error) {
+        console.error('Error handling request:', error);
+        res.status(500).send('Error handling request');
+    }
 });
 
 app.listen(port, () => {
