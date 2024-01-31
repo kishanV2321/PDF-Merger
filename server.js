@@ -18,7 +18,7 @@ app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
     const files = req.files.map(file => file.path);
     let d = await mergepdfs(files);
 
-    res.redirect(`http://localhost:3000/static/${d}.pdf`)
+    res.redirect(`/static/${d}.pdf`);
     
 });
 
