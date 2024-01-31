@@ -1,14 +1,23 @@
 const PDFMerger = require('pdf-merger-js');
+const fs = require('fs');
 
 const mergepdfs = async (files) => {
     try {
         const merger = new PDFMerger();
 
         for (const file of files) {
-            await merger.add(file); 
+            await merger.add(file);
         }
+
         let d = new Date().getTime();
-        await merger.save(`public/${d}.pdf`);
+        
+        // Create the 'public' directory if it doesn't exist
+        const publicDir = 'public';
+        if (!fs.existsSync(publicDir)) {
+            fs.mkdirSync(publicDir);
+        }
+
+        await merger.save(`${publicDir}/${d}.pdf`);
         return d;
     } catch (error) {
         console.error('Error merging PDFs:', error);
@@ -17,6 +26,7 @@ const mergepdfs = async (files) => {
 };
 
 module.exports = { mergepdfs };
+
 
 
 
