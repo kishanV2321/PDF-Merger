@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     
 // });
 
-app.post('/merge', upload.array('pdfs', 12), async (req, res, next) => {
+app.post('/merge', upload.array('pdfs', 30), async (req, res, next) => {
     console.log(req.files);
 
     try {
